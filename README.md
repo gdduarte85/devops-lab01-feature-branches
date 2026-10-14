@@ -6,6 +6,7 @@ Repository used for Git feature branch and pull request workflows.
  
 This content was created within a feature branch.
 
+
 ## Branch Protection Testing
 
-This update was completed by Developer B during documentation improvements.
+This update was completed by Developer A and Developer B during documentation improvements.
