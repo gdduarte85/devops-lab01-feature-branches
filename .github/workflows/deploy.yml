@@ -1,0 +1,19 @@
+name: CD Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Deploy Application
+        run: |
+          cp app.py ~/devops-labs/test-environment/webapp/
+          sudo systemctl restart devops-webapp
