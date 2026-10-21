@@ -7,11 +7,14 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Prepare Webapp Directory
+        run: mkdir -p ~/devops-labs/test-environment/webapp/
 
       - name: Deploy Application
         run: |
