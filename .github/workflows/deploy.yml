@@ -17,3 +17,13 @@ jobs:
         run: |
           cp app.py ~/devops-labs/test-environment/webapp/
           sudo systemctl restart devops-webapp
+
+      - name: Verify Application Availability
+        run: |
+          curl http://localhost:5000
+
+      - name: OWASP ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.12.0
+        with:
+          target: 'http://localhost:5000'
+          fail_action_if_failure: false
