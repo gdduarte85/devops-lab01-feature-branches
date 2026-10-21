@@ -13,6 +13,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Prepare Webapp Directory
+        run: mkdir -p ~/devops-labs/test-environment/webapp/
+
       - name: Deploy Application
         run: |
           cp app.py ~/devops-labs/test-environment/webapp/
