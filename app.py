@@ -13,10 +13,5 @@ def home():
     return "DevOps Lab 5 Automatic Deployment Successful"
 
 
-@app.route("/calculate/<expression>")
-def calculate(expression):
-    return str(eval(expression))
-
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
