@@ -10,7 +10,7 @@ def add(a, b):
 
 @app.route("/")
 def home():
-    return "DevOps Lab 5 Automatic Deployment Successful"
+    return "DevOps Web Application Version 2"
 
 
 if __name__ == "__main__":
