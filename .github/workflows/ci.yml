@@ -38,6 +38,14 @@ jobs:
         run: |
           bandit -r . -x ./venv
 
+      - name: Install pip-audit
+        run: |
+          pip install pip-audit
+
+      - name: Dependency Vulnerability Scan
+        run: |
+          pip-audit -r requirements.txt
+
       - name: Build Docker Image
         run: |
           docker build -t devops-webapp-ci .
